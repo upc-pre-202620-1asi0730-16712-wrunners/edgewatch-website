@@ -9,11 +9,13 @@
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body id="top">
+  <!-- ==================== Skip Link for Keyboard Accessibility ==================== -->
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
 
   <!-- ==================== Site Header / Navbar ==================== -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container navbar">
-      <a href="#top" class="brand-logo" aria-label="EdgeWatch Home">
+      <a href="#top" class="brand-logo" aria-label="EdgeWatch Home" data-i18n-aria="brand_home_aria">
         <img src="assets/logo.png" alt="EdgeWatch Logo" class="brand-logo-img">
       </a>
 
@@ -51,13 +53,13 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content" role="main" tabindex="-1">
     <!-- ==================== Hero Section ==================== -->
-    <section class="hero-section">
+    <section class="hero-section" aria-labelledby="hero-title">
       <div class="hero-bg-accent" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1 class="hero-title" data-i18n="hero_title">Stop chasing the data that your own team already generates</h1>
+          <h1 id="hero-title" class="hero-title" data-i18n="hero_title">Stop chasing the data that your own team already generates</h1>
           <p class="hero-subtitle" data-i18n="hero_subtitle">Real-time traceability, alerts, and diagnostics for HVOF thermal spray processes</p>
           <div class="hero-buttons">
             <button class="btn btn-primary" data-open-demo data-i18n="hero_cta_primary">Request demo</button>
@@ -79,11 +81,11 @@
     </section>
 
     <!-- ==================== Problem Section ==================== -->
-    <section class="problem-section" id="problema">
+    <section class="problem-section" id="problema" aria-labelledby="problem-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker" data-i18n="problem_kicker">THE PROBLEM</span>
-          <h2 class="section-title" data-i18n="problem_title">The cost of flying blind on diagnostics</h2>
+          <h2 id="problem-title" class="section-title" data-i18n="problem_title">The cost of flying blind on diagnostics</h2>
         </div>
 
         <div class="problem-grid">
@@ -129,7 +131,7 @@
     </section>
 
     <!-- ==================== HVOF Provider Section ==================== -->
-    <section class="provider-section" id="proveedores">
+    <section class="provider-section" id="proveedores" aria-labelledby="provider-title">
       <div class="container provider-grid">
         <div class="provider-visual">
           <img src="assets/analytics-phone.png" alt="EdgeWatch HVOF Analytics Platform" class="analytics-phone-img" data-i18n-alt="provider_phone_alt">
@@ -137,7 +139,7 @@
 
         <div class="provider-content">
           <span class="section-kicker" data-i18n="provider_kicker">FOR HVOF SERVICE PROVIDERS</span>
-          <h2 class="section-title text-left" data-i18n="provider_title">Traceability and diagnostics for your coating service</h2>
+          <h2 id="provider-title" class="section-title text-left" data-i18n="provider_title">Traceability and diagnostics for your coating service</h2>
 
           <div class="provider-features">
             <!-- Feature 1 -->
@@ -172,11 +174,11 @@
     </section>
 
     <!-- ==================== Solution Section ==================== -->
-    <section class="solution-section" id="solucion">
+    <section class="solution-section" id="solucion" aria-labelledby="solution-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker" data-i18n="solution_kicker">THE SOLUTION</span>
-          <h2 class="section-title" data-i18n="solution_title">From isolated data to predictive decisions</h2>
+          <h2 id="solution-title" class="section-title" data-i18n="solution_title">From isolated data to predictive decisions</h2>
         </div>
 
         <div class="solution-grid">
@@ -262,11 +264,11 @@
     </section>
 
     <!-- ==================== Plant / Asset Owner Section ==================== -->
-    <section class="plant-section" id="plantas">
+    <section class="plant-section" id="plantas" aria-labelledby="plant-title">
       <div class="container plant-grid">
         <div class="plant-content">
           <span class="section-kicker" data-i18n="plant_kicker">FOR PLANTS WITH IN-HOUSE COATING LINES</span>
-          <h2 class="section-title text-left" data-i18n="plant_title">Consolidated performance view of your suppliers</h2>
+          <h2 id="plant-title" class="section-title text-left" data-i18n="plant_title">Consolidated performance view of your suppliers</h2>
           <p class="section-desc text-left" data-i18n="plant_desc">Eliminate manual information cross-referencing: inspect recovered components, supplier data, issued certificates, and PCR compliance rates grouped by vendor and model in a single unified view.</p>
           <button class="btn btn-dark plant-btn" data-open-demo data-plan="Asset Owner" data-i18n="plant_btn">Get started as asset owner</button>
         </div>
@@ -278,11 +280,11 @@
     </section>
 
     <!-- ==================== How It Works Section ==================== -->
-    <section class="how-it-works-section" id="como-funciona">
+    <section class="how-it-works-section" id="como-funciona" aria-labelledby="how-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker kicker-light" data-i18n="how_kicker">HOW IT WORKS</span>
-          <h2 class="section-title text-white" data-i18n="how_title">See how it works</h2>
+          <h2 id="how-title" class="section-title text-white" data-i18n="how_title">See how it works</h2>
         </div>
 
         <div class="steps-timeline-wrapper">
@@ -322,11 +324,11 @@
     </section>
 
     <!-- ==================== Testimonials Section ==================== -->
-    <section class="testimonials-section" id="testimonios">
+    <section class="testimonials-section" id="testimonios" aria-labelledby="test-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker" data-i18n="test_kicker">TESTIMONIALS</span>
-          <h2 class="section-title" data-i18n="test_title">Discover our customer satisfaction</h2>
+          <h2 id="test-title" class="section-title" data-i18n="test_title">Discover our customer satisfaction</h2>
         </div>
 
         <div class="testimonials-carousel-wrapper">
@@ -424,7 +426,7 @@
     </section>
 
     <!-- ==================== Real-Time Alerts Section ==================== -->
-    <section class="alerts-section" id="alertas">
+    <section class="alerts-section" id="alertas" aria-labelledby="alerts-title">
       <div class="container alerts-grid">
         <div class="alerts-visual">
           <img src="assets/alert-hand.png" alt="Real-time critical alerts on mobile smartphone" class="alert-hand-img" data-i18n-alt="alerts_img_alt">
@@ -432,7 +434,7 @@
 
         <div class="alerts-content">
           <span class="section-kicker" data-i18n="alerts_kicker">REAL-TIME ALERTS</span>
-          <h2 class="section-title text-left" data-i18n="alerts_title">Receive critical alerts wherever you are</h2>
+          <h2 id="alerts-title" class="section-title text-left" data-i18n="alerts_title">Receive critical alerts wherever you are</h2>
           <p class="section-desc text-left" data-i18n="alerts_desc">Operators and maintenance supervisors receive alerts the instant a deviation occurs, both within the platform and via email.</p>
           <button class="btn btn-dark alerts-btn" data-open-demo data-i18n="alerts_btn">Learn more</button>
         </div>
@@ -440,11 +442,11 @@
     </section>
 
     <!-- ==================== Plans Section ==================== -->
-    <section class="plans-section" id="planes">
+    <section class="plans-section" id="planes" aria-labelledby="plans-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker kicker-light" data-i18n="plans_kicker">PLANS</span>
-          <h2 class="section-title text-white" data-i18n="plans_title">Plans tailored to the way you operate</h2>
+          <h2 id="plans-title" class="section-title text-white" data-i18n="plans_title">Plans tailored to the way you operate</h2>
         </div>
 
         <div class="plans-grid">
@@ -525,11 +527,11 @@
     </section>
 
     <!-- ==================== FAQ Section ==================== -->
-    <section class="faq-section" id="faq">
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-header">
           <span class="section-kicker" data-i18n="faq_kicker">FREQUENTLY ASKED QUESTIONS</span>
-          <h2 class="section-title" data-i18n="faq_title">Have any questions?</h2>
+          <h2 id="faq-title" class="section-title" data-i18n="faq_title">Have any questions?</h2>
         </div>
 
         <div class="faq-container">
@@ -598,35 +600,35 @@
   </main>
 
   <!-- ==================== Footer ==================== -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <!-- Col 1: Brand & About -->
         <div class="footer-brand">
           <div class="footer-logo">WebRunners</div>
-          <div class="footer-links">
+          <nav class="footer-links" aria-label="About navigation" data-i18n-aria="footer_nav_about_aria">
             <a href="#testimonios" data-i18n="footer_about">About Us</a>
             <a href="#solucion" data-i18n="footer_product_about">About the Product</a>
-          </div>
+          </nav>
         </div>
 
         <!-- Col 2: Product -->
         <div class="footer-col">
           <h4 data-i18n="footer_col_product">Product</h4>
-          <div class="footer-links">
+          <nav class="footer-links" aria-label="Product navigation" data-i18n-aria="footer_nav_product_aria">
             <a href="#como-funciona" data-i18n="footer_how">How it works</a>
             <a href="#proveedores" data-i18n="footer_segments">Segments</a>
             <a href="#planes" data-i18n="footer_plans">Plans</a>
-          </div>
+          </nav>
         </div>
 
         <!-- Col 3: Legal -->
         <div class="footer-col">
           <h4 data-i18n="footer_col_legal">Legal</h4>
-          <div class="footer-links">
+          <nav class="footer-links" aria-label="Legal navigation" data-i18n-aria="footer_nav_legal_aria">
             <a href="#" data-i18n="footer_terms">Terms & Conditions</a>
             <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-          </div>
+          </nav>
         </div>
       </div>
 
