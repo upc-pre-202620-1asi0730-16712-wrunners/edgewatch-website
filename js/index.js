@@ -1,22 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  function getI18nDict() {
+    const currentLang = typeof getCurrentLanguage === 'function' ? getCurrentLanguage() : 'en_US';
+    return (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+  }
+
+  const mobileToggle = document.getElementById('mobile-nav-toggle') || document.querySelector('.mobile-toggle');
+  const navMenu = document.getElementById('primary-navigation') || document.querySelector('.nav-menu');
 
   if (mobileToggle && navMenu) {
+    function closeMobileNav() {
+      navMenu.classList.remove('open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      const dict = getI18nDict();
+      mobileToggle.setAttribute('aria-label', dict ? dict.mobile_menu_open : 'Open navigation menu');
+      mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`;
+    }
+
+    function openMobileNav() {
+      navMenu.classList.add('open');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      const dict = getI18nDict();
+      mobileToggle.setAttribute('aria-label', dict ? dict.mobile_menu_close : 'Close navigation menu');
+      mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M18 6L6 18M6 6l12 12"/></svg>`;
+    }
+
     mobileToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('open');
-      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      mobileToggle.innerHTML = isOpen
-        ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>`
-        : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`;
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
     navMenu.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`;
-      });
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        closeMobileNav();
+        mobileToggle.focus();
+      }
     });
   }
 

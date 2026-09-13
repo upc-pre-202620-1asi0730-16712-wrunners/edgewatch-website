@@ -20,32 +20,32 @@
       </a>
 
       <!-- Mobile Navigation Toggle -->
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <button class="mobile-toggle" id="mobile-nav-toggle" aria-label="Open navigation menu" data-i18n-aria="mobile_menu_open" aria-expanded="false" aria-controls="primary-navigation" aria-haspopup="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
 
       <!-- Main Navigation Menu -->
-      <nav class="nav-menu">
+      <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation" data-i18n-aria="nav_main_aria">
         <a href="#solucion" class="nav-link" data-i18n="nav_product">Product</a>
         <a href="#como-funciona" class="nav-link" data-i18n="nav_how_it_works">How it works</a>
         <a href="#planes" class="nav-link" data-i18n="nav_plans">Plans</a>
         <a href="#testimonios" class="nav-link" data-i18n="nav_about">About Us</a>
 
         <!-- Language Switcher in Mobile Drawer -->
-        <div class="mobile-lang-switcher lang-switcher" role="group" aria-label="Language selector">
-          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false">ES</button>
+        <div class="mobile-lang-switcher lang-switcher" role="group" aria-label="Language selector" data-i18n-aria="lang_selector_aria">
+          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true" aria-label="Switch language to English" data-i18n-aria="lang_btn_en_aria">EN</button>
+          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false" aria-label="Switch language to Spanish" data-i18n-aria="lang_btn_es_aria">ES</button>
         </div>
       </nav>
 
       <!-- Action Button & Desktop Language Switcher -->
       <div class="nav-actions">
         <!-- Language Switcher (Desktop) -->
-        <div class="lang-switcher" role="group" aria-label="Language selector">
-          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false">ES</button>
+        <div class="lang-switcher" role="group" aria-label="Language selector" data-i18n-aria="lang_selector_aria">
+          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true" aria-label="Switch language to English" data-i18n-aria="lang_btn_en_aria">EN</button>
+          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false" aria-label="Switch language to Spanish" data-i18n-aria="lang_btn_es_aria">ES</button>
         </div>
 
         <button class="btn btn-outline" data-open-demo data-i18n="nav_cta">Request demo</button>
