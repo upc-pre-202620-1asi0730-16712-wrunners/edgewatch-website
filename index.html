@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EdgeWatch - Trazabilidad, alertas y diagnóstico en tiempo real para procesos de recubrimiento HVOF">
-  <title>EdgeWatch | Trazabilidad y Diagnóstico para Procesos HVOF</title>
+  <meta name="description" content="Real-time traceability, alerts, and diagnostics for HVOF thermal spray coating processes">
+  <title>EdgeWatch | Traceability & Diagnostics for HVOF Processes</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
@@ -14,11 +14,11 @@
   <header class="site-header">
     <div class="container navbar">
       <a href="#top" class="brand-logo" aria-label="EdgeWatch Home">
-        <img src="assets/logo.png" height="24" alt="EdgeWatch Logo" class="brand-logo-img">
+        <img src="assets/logo.png" alt="EdgeWatch Logo" class="brand-logo-img">
       </a>
 
       <!-- Mobile Navigation Toggle -->
-      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -26,15 +26,27 @@
 
       <!-- Main Navigation Menu -->
       <nav class="nav-menu">
-        <a href="#solucion" class="nav-link">Producto</a>
-        <a href="#como-funciona" class="nav-link">Cómo funciona</a>
-        <a href="#planes" class="nav-link">Planes</a>
-        <a href="#testimonios" class="nav-link">Nosotros</a>
+        <a href="#solucion" class="nav-link" data-i18n="nav_product">Product</a>
+        <a href="#como-funciona" class="nav-link" data-i18n="nav_how_it_works">How it works</a>
+        <a href="#planes" class="nav-link" data-i18n="nav_plans">Plans</a>
+        <a href="#testimonios" class="nav-link" data-i18n="nav_about">About Us</a>
+
+        <!-- Language Switcher in Mobile Drawer -->
+        <div class="mobile-lang-switcher lang-switcher" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false">ES</button>
+        </div>
       </nav>
 
-      <!-- Action Button -->
+      <!-- Action Button & Desktop Language Switcher -->
       <div class="nav-actions">
-        <button class="btn btn-outline" data-open-demo>Solicitar demo</button>
+        <!-- Language Switcher (Desktop) -->
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en_US" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false">ES</button>
+        </div>
+
+        <button class="btn btn-outline" data-open-demo data-i18n="nav_cta">Request demo</button>
       </div>
     </div>
   </header>
@@ -45,22 +57,22 @@
       <div class="hero-bg-accent" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1 class="hero-title">Deje de perseguir el dato que su propio equipo ya genera</h1>
-          <p class="hero-subtitle">Trazabilidad, alertas y diagnóstico en tiempo real para procesos de recubrimiento HVOF</p>
+          <h1 class="hero-title" data-i18n="hero_title">Stop chasing the data that your own team already generates</h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">Real-time traceability, alerts, and diagnostics for HVOF thermal spray processes</p>
           <div class="hero-buttons">
-            <button class="btn btn-primary" data-open-demo>Solicitar demo</button>
+            <button class="btn btn-primary" data-open-demo data-i18n="hero_cta_primary">Request demo</button>
             <a href="#como-funciona" class="btn btn-ghost">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
-              Ver cómo funciona
+              <span data-i18n="hero_cta_secondary">See how it works</span>
             </a>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-phone-container">
-            <img src="assets/hero-phone.png" alt="EdgeWatch Aplicación Móvil de Integraciones" class="hero-phone-img">
+            <img src="assets/hero-phone.png" alt="EdgeWatch Integrations Mobile App" class="hero-phone-img" data-i18n-alt="hero_phone_alt">
           </div>
         </div>
       </div>
@@ -70,8 +82,8 @@
     <section class="problem-section" id="problema">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">EL PROBLEMA</span>
-          <h2 class="section-title">El costo del diagnóstico a ciegas</h2>
+          <span class="section-kicker" data-i18n="problem_kicker">THE PROBLEM</span>
+          <h2 class="section-title" data-i18n="problem_title">The cost of flying blind on diagnostics</h2>
         </div>
 
         <div class="problem-grid">
@@ -82,8 +94,8 @@
                 <path d="M18.178 8c5.096 0 5.096 8 0 8-2.67 0-4.66-2.193-6.178-4.32C10.482 9.553 8.492 7.36 5.822 7.36c-5.096 0-5.096 8 0 8 2.67 0 4.66-2.193 6.178-4.32"/>
               </svg>
             </div>
-            <h3 class="problem-card-title">Trazabilidad perdida</h3>
-            <p class="problem-card-text">Los parámetros de proceso quedan en el PLC de la máquina o en registros de papel; sin vínculo con la OF y la WO del cliente.</p>
+            <h3 class="problem-card-title" data-i18n="problem_card1_title">Lost Traceability</h3>
+            <p class="problem-card-text" data-i18n="problem_card1_text">Process parameters remain locked in the machine's PLC or on paper logs; unconnected to the customer's OF and WO.</p>
           </div>
 
           <!-- Problem 2 -->
@@ -96,8 +108,8 @@
                 <polyline points="4 6 12 10 20 4"></polyline>
               </svg>
             </div>
-            <h3 class="problem-card-title">11 % de ingresos perdidos</h3>
-            <p class="problem-card-text">Las 500 mayores empresas del mundo pierden en promedio 11 % de sus ingresos por paradas no planificadas; el 45 % se origina en fallas de componentes críticos (Siemens, True Cost of Downtime).</p>
+            <h3 class="problem-card-title" data-i18n="problem_card2_title">11% in Lost Revenue</h3>
+            <p class="problem-card-text" data-i18n="problem_card2_text">The world's 500 largest enterprises lose an average of 11% of their revenue to unplanned downtime; 45% stems from critical component failures (Siemens, True Cost of Downtime).</p>
           </div>
 
           <!-- Problem 3 -->
@@ -109,8 +121,8 @@
                 <line x1="12" y1="1" x2="12" y2="3"></line>
               </svg>
             </div>
-            <h3 class="problem-card-title">US$ 180,000 por incidente</h3>
-            <p class="problem-card-text">Costo promedio de una parada de equipo en el sector minero, cuando el diagnóstico depende del conocimiento tácito de pocos técnicos.</p>
+            <h3 class="problem-card-title" data-i18n="problem_card3_title">US$ 180,000 per Incident</h3>
+            <p class="problem-card-text" data-i18n="problem_card3_text">Average cost of an equipment stoppage in the mining sector when diagnosis relies on the tacit knowledge of only a few technicians.</p>
           </div>
         </div>
       </div>
@@ -120,12 +132,12 @@
     <section class="provider-section" id="proveedores">
       <div class="container provider-grid">
         <div class="provider-visual">
-          <img src="assets/analytics-phone.png" alt="EdgeWatch Plataforma de Análisis HVOF" class="analytics-phone-img">
+          <img src="assets/analytics-phone.png" alt="EdgeWatch HVOF Analytics Platform" class="analytics-phone-img" data-i18n-alt="provider_phone_alt">
         </div>
 
         <div class="provider-content">
-          <span class="section-kicker">PARA PROVEEDORES DE SERVICIO HVOF</span>
-          <h2 class="section-title text-left">Trazabilidad y diagnóstico para su servicio de recubrimiento</h2>
+          <span class="section-kicker" data-i18n="provider_kicker">FOR HVOF SERVICE PROVIDERS</span>
+          <h2 class="section-title text-left" data-i18n="provider_title">Traceability and diagnostics for your coating service</h2>
 
           <div class="provider-features">
             <!-- Feature 1 -->
@@ -137,8 +149,8 @@
                 </svg>
               </div>
               <div class="feature-item-body">
-                <h4>Sesión vinculada a su OF/WO</h4>
-                <p>Cada sesión de rociado queda asociada a la orden de fabricación, la orden de trabajo, el cliente y el modelo de componente.</p>
+                <h4 data-i18n="provider_feat1_title">Session linked to your OF/WO</h4>
+                <p data-i18n="provider_feat1_text">Every thermal spray session is tied to the manufacturing order, work order, customer, and component model.</p>
               </div>
             </div>
 
@@ -150,8 +162,8 @@
                 </svg>
               </div>
               <div class="feature-item-body">
-                <h4>Diagnóstico por componente</h4>
-                <p>El catálogo de reglas causa-efecto identifica la parte de máquina sospechosa ante cada falla, en lugar de un código crudo del PLC.</p>
+                <h4 data-i18n="provider_feat2_title">Component-level diagnostics</h4>
+                <p data-i18n="provider_feat2_text">The cause-and-effect rule catalog identifies the suspicious machine part for each failure, instead of a raw PLC code.</p>
               </div>
             </div>
           </div>
@@ -163,8 +175,8 @@
     <section class="solution-section" id="solucion">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">LA SOLUCIÓN</span>
-          <h2 class="section-title">De datos aislados a decisiones predictivas</h2>
+          <span class="section-kicker" data-i18n="solution_kicker">THE SOLUTION</span>
+          <h2 class="section-title" data-i18n="solution_title">From isolated data to predictive decisions</h2>
         </div>
 
         <div class="solution-grid">
@@ -179,8 +191,8 @@
                 <polyline points="10 9 9 9 8 9"></polyline>
               </svg>
             </div>
-            <h3 class="solution-card-title">Trazabilidad</h3>
-            <p class="solution-card-text">Historia completa del componente por número de serie, OF o WO, consultable en un solo lugar.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card1_title">Traceability</h3>
+            <p class="solution-card-text" data-i18n="solution_card1_text">Complete component history by serial number, OF, or WO, queryable in one single place.</p>
           </div>
 
           <!-- Card 2 -->
@@ -191,8 +203,8 @@
                 <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
               </svg>
             </div>
-            <h3 class="solution-card-title">Alertas</h3>
-            <p class="solution-card-text">Notificación en tiempo real cuando un parámetro sale de su rango nominal, mientras la sesión está en curso.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card2_title">Alerts</h3>
+            <p class="solution-card-text" data-i18n="solution_card2_text">Real-time notification when a parameter goes out of its nominal range while the session is active.</p>
           </div>
 
           <!-- Card 3 -->
@@ -203,8 +215,8 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </div>
-            <h3 class="solution-card-title">Diagnóstico</h3>
-            <p class="solution-card-text">Causa probable y componente de máquina sospechoso, sugeridos automáticamente por el catálogo de reglas.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card3_title">Diagnostics</h3>
+            <p class="solution-card-text" data-i18n="solution_card3_text">Probable root cause and suspicious machine component automatically suggested by the rule catalog.</p>
           </div>
 
           <!-- Card 4 -->
@@ -215,8 +227,8 @@
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h3 class="solution-card-title">Certificados de Calidad</h3>
-            <p class="solution-card-text">Evidencia documentada de proceso dentro de tolerancia, exportable para el cliente minero.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card4_title">Quality Certificates</h3>
+            <p class="solution-card-text" data-i18n="solution_card4_text">Documented proof of within-tolerance process parameters, exportable for mining and industrial clients.</p>
           </div>
 
           <!-- Card 5 -->
@@ -228,8 +240,8 @@
                 <path d="M16.24 7.76a6 6 0 1 0 0 8.49"></path>
               </svg>
             </div>
-            <h3 class="solution-card-title">Desempeño en Campo (PCR)</h3>
-            <p class="solution-card-text">Vida útil real registrada al retorno de la pieza y contrastada contra el PCR comprometido.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card5_title">Field Performance (PCR)</h3>
+            <p class="solution-card-text" data-i18n="solution_card5_text">Actual wear life registered upon return of the component and benchmarked against committed PCR.</p>
           </div>
 
           <!-- Card 6 -->
@@ -242,8 +254,8 @@
                 <line x1="9" y1="14" x2="15" y2="14"></line>
               </svg>
             </div>
-            <h3 class="solution-card-title">Reportes de Falla</h3>
-            <p class="solution-card-text">Frecuencia de fallas por celda y por componente, para priorizar intervenciones.</p>
+            <h3 class="solution-card-title" data-i18n="solution_card6_title">Failure Reports</h3>
+            <p class="solution-card-text" data-i18n="solution_card6_text">Failure frequency by spray cell and machine component to prioritize maintenance interventions.</p>
           </div>
         </div>
       </div>
@@ -253,14 +265,14 @@
     <section class="plant-section" id="plantas">
       <div class="container plant-grid">
         <div class="plant-content">
-          <span class="section-kicker">PARA PLANTAS CON LÍNEA DE RECUBRIMIENTO PROPIA</span>
-          <h2 class="section-title text-left">Vista consolidada del desempeño de sus proveedores</h2>
-          <p class="section-desc text-left">Elimine el cruce manual de información: consulte en una sola vista los componentes recuperados, su proveedor, el certificado emitido y la tasa de cumplimiento de PCR agrupada por proveedor y modelo.</p>
-          <button class="btn btn-dark plant-btn" data-open-demo data-plan="Asset Owner">Comenzar como propietario de activos</button>
+          <span class="section-kicker" data-i18n="plant_kicker">FOR PLANTS WITH IN-HOUSE COATING LINES</span>
+          <h2 class="section-title text-left" data-i18n="plant_title">Consolidated performance view of your suppliers</h2>
+          <p class="section-desc text-left" data-i18n="plant_desc">Eliminate manual information cross-referencing: inspect recovered components, supplier data, issued certificates, and PCR compliance rates grouped by vendor and model in a single unified view.</p>
+          <button class="btn btn-dark plant-btn" data-open-demo data-plan="Asset Owner" data-i18n="plant_btn">Get started as asset owner</button>
         </div>
 
         <div class="plant-visual">
-          <img src="assets/pcr-diagram.png" alt="Consolidación de Proveedores OF WO PCR PDF CSV" class="pcr-diagram-img">
+          <img src="assets/pcr-diagram.png" alt="Consolidation of Suppliers OF WO PCR PDF CSV" class="pcr-diagram-img" data-i18n-alt="plant_diagram_alt">
         </div>
       </div>
     </section>
@@ -269,8 +281,8 @@
     <section class="how-it-works-section" id="como-funciona">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker kicker-light">CÓMO FUNCIONA</span>
-          <h2 class="section-title text-white">Veamos como funciona</h2>
+          <span class="section-kicker kicker-light" data-i18n="how_kicker">HOW IT WORKS</span>
+          <h2 class="section-title text-white" data-i18n="how_title">See how it works</h2>
         </div>
 
         <div class="steps-timeline-wrapper">
@@ -280,29 +292,29 @@
             <!-- Step 1 -->
             <div class="step-card">
               <div class="step-circle">01</div>
-              <h3 class="step-title">Conecte el gateway</h3>
-              <p class="step-text">Vincule el gateway de telemetría al PLC de su celda HVOF, sin modificar el equipo ni el software del fabricante.</p>
+              <h3 class="step-title" data-i18n="how_step1_title">Connect the gateway</h3>
+              <p class="step-text" data-i18n="how_step1_text">Link the telemetry gateway to your HVOF cell's PLC without modifying existing equipment or manufacturer software.</p>
             </div>
 
             <!-- Step 2 -->
             <div class="step-card">
               <div class="step-circle">02</div>
-              <h3 class="step-title">Registre la sesión</h3>
-              <p class="step-text">Cada sesión de rociado se asocia automáticamente a su OF, WO, cliente y modelo de componente.</p>
+              <h3 class="step-title" data-i18n="how_step2_title">Record the session</h3>
+              <p class="step-text" data-i18n="how_step2_text">Each coating run is automatically linked to your OF, WO, customer, and component model.</p>
             </div>
 
             <!-- Step 3 -->
             <div class="step-card">
               <div class="step-circle">03</div>
-              <h3 class="step-title">Reciba alertas</h3>
-              <p class="step-text">El sistema detecta desviaciones fuera de rango y notifica al responsable mientras la sesión está en curso.</p>
+              <h3 class="step-title" data-i18n="how_step3_title">Receive alerts</h3>
+              <p class="step-text" data-i18n="how_step3_text">The system detects out-of-spec deviations and notifies responsible personnel while the session is running.</p>
             </div>
 
             <!-- Step 4 -->
             <div class="step-card">
               <div class="step-circle">04</div>
-              <h3 class="step-title">Emita el certificado / compare contra el PCR</h3>
-              <p class="step-text">Genere el certificado de calidad de la orden y contraste el desempeño real en campo contra el PCR comprometido.</p>
+              <h3 class="step-title" data-i18n="how_step4_title">Issue certificate / compare against PCR</h3>
+              <p class="step-text" data-i18n="how_step4_text">Generate the order's quality certificate and benchmark actual field wear life against committed PCR.</p>
             </div>
           </div>
         </div>
@@ -313,8 +325,8 @@
     <section class="testimonials-section" id="testimonios">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">TESTIMONIOS</span>
-          <h2 class="section-title">Conoce la satisfacción de nuestros clientes</h2>
+          <span class="section-kicker" data-i18n="test_kicker">TESTIMONIALS</span>
+          <h2 class="section-title" data-i18n="test_title">Discover our customer satisfaction</h2>
         </div>
 
         <div class="testimonials-carousel-wrapper">
@@ -322,11 +334,11 @@
             <!-- Testimonial 1 -->
             <div class="testimonial-card">
               <div>
-                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
-                <div class="testimonial-role">Ingeniería de Calidad</div>
-                <p class="testimonial-quote">"Por fin puedo sustentar ante el cliente minero que un lote fue recubierto dentro de tolerancia, sin reconstruir nada desde papeles."</p>
+                <div class="testimonial-role" data-i18n="test_card1_role">Quality Engineer</div>
+                <p class="testimonial-quote" data-i18n="test_card1_quote">"I can finally prove to the mining customer that a batch was coated strictly within tolerance, without reconstructing anything from paper logs."</p>
               </div>
               <div class="testimonial-author">
                 <img src="assets/avatar-maria.png" alt="María Herrera" class="author-avatar">
@@ -340,11 +352,11 @@
             <!-- Testimonial 2 -->
             <div class="testimonial-card">
               <div>
-                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
-                <div class="testimonial-role">Jefe de Mantenimiento</div>
-                <p class="testimonial-quote">"El diagnóstico ya no depende de que el técnico más antiguo esté de turno. La plataforma nos dice qué componente mirar."</p>
+                <div class="testimonial-role" data-i18n="test_card2_role">Maintenance Head</div>
+                <p class="testimonial-quote" data-i18n="test_card2_quote">"Diagnosis no longer depends on whether the most senior technician is on shift. The platform immediately tells us which component to inspect."</p>
               </div>
               <div class="testimonial-author">
                 <img src="assets/avatar-denis.png" alt="Denis Bueno" class="author-avatar">
@@ -358,11 +370,11 @@
             <!-- Testimonial 3 -->
             <div class="testimonial-card">
               <div>
-                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
-                <div class="testimonial-role">Supervisor de Procesos</div>
-                <p class="testimonial-quote">"Redujimos a la mitad el tiempo que nos tomaba determinar la causa de una parada."</p>
+                <div class="testimonial-role" data-i18n="test_card3_role">Process Supervisor</div>
+                <p class="testimonial-quote" data-i18n="test_card3_quote">"We cut the time required to determine the root cause of an unplanned stoppage in half."</p>
               </div>
               <div class="testimonial-author">
                 <img src="assets/avatar-esteban.png" alt="Esteban Romero" class="author-avatar">
@@ -376,11 +388,11 @@
             <!-- Testimonial 4 -->
             <div class="testimonial-card">
               <div>
-                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
-                <div class="testimonial-role">Analista de Confiabilidad</div>
-                <p class="testimonial-quote">"Ahora vemos en una sola pantalla el cumplimiento de PCR de todos los proveedores y optimizamos la rotación de repuestos críticos."</p>
+                <div class="testimonial-role" data-i18n="test_card4_role">Reliability Analyst</div>
+                <p class="testimonial-quote" data-i18n="test_card4_quote">"Now we monitor PCR compliance across all vendors on a single screen and optimize critical spares inventory."</p>
               </div>
               <div class="testimonial-author">
                 <img src="assets/avatar-arnold.png" alt="Arnold Parra" class="author-avatar">
@@ -395,13 +407,13 @@
 
         <!-- Carousel Arrow Controls -->
         <div class="testimonials-controls">
-          <button class="carousel-arrow carousel-prev" aria-label="Anterior testimonio">
+          <button class="carousel-arrow carousel-prev" aria-label="Previous testimonial" data-i18n-aria="test_prev_aria">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
-          <button class="carousel-arrow carousel-next" aria-label="Siguiente testimonio">
+          <button class="carousel-arrow carousel-next" aria-label="Next testimonial" data-i18n-aria="test_next_aria">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -415,14 +427,14 @@
     <section class="alerts-section" id="alertas">
       <div class="container alerts-grid">
         <div class="alerts-visual">
-          <img src="assets/alert-hand.png" alt="Notificaciones y Alertas Críticas en Móvil" class="alert-hand-img">
+          <img src="assets/alert-hand.png" alt="Real-time critical alerts on mobile smartphone" class="alert-hand-img" data-i18n-alt="alerts_img_alt">
         </div>
 
         <div class="alerts-content">
-          <span class="section-kicker">ALERTAS EN TIEMPO REAL</span>
-          <h2 class="section-title text-left">Reciba alertas críticas donde esté</h2>
-          <p class="section-desc text-left">El operador y el supervisor de mantenimiento reciben la alerta en el momento en que ocurre la desviación, en la plataforma y por correo electrónico.</p>
-          <button class="btn btn-dark alerts-btn" data-open-demo>Conocer más</button>
+          <span class="section-kicker" data-i18n="alerts_kicker">REAL-TIME ALERTS</span>
+          <h2 class="section-title text-left" data-i18n="alerts_title">Receive critical alerts wherever you are</h2>
+          <p class="section-desc text-left" data-i18n="alerts_desc">Operators and maintenance supervisors receive alerts the instant a deviation occurs, both within the platform and via email.</p>
+          <button class="btn btn-dark alerts-btn" data-open-demo data-i18n="alerts_btn">Learn more</button>
         </div>
       </div>
     </section>
@@ -431,8 +443,8 @@
     <section class="plans-section" id="planes">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker kicker-light">PLANES</span>
-          <h2 class="section-title text-white">Planes pensados para su forma de operar</h2>
+          <span class="section-kicker kicker-light" data-i18n="plans_kicker">PLANS</span>
+          <h2 class="section-title text-white" data-i18n="plans_title">Plans tailored to the way you operate</h2>
         </div>
 
         <div class="plans-grid">
@@ -440,8 +452,8 @@
           <div class="plan-card plan-card-glass">
             <div>
               <div class="plan-header">
-                <h3 class="plan-name">Recuperation Supplier</h3>
-                <p class="plan-sub">Para proveedores de servicio HVOF</p>
+                <h3 class="plan-name" data-i18n="plan1_name">Recuperation Supplier</h3>
+                <p class="plan-sub" data-i18n="plan1_sub">For HVOF coating service providers</p>
               </div>
 
               <div class="plan-features">
@@ -449,39 +461,39 @@
                   <div class="plan-check-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span>Gestión de celdas HVOF</span>
+                  <span data-i18n="plan1_feat1">HVOF cell management</span>
                 </div>
 
                 <div class="plan-feature-item">
                   <div class="plan-check-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span>Trazabilidad OF/WO</span>
+                  <span data-i18n="plan1_feat2">OF/WO traceability</span>
                 </div>
 
                 <div class="plan-feature-item">
                   <div class="plan-check-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span>Alertas y diagnóstico asistido</span>
+                  <span data-i18n="plan1_feat3">Assisted alerts and diagnostics</span>
                 </div>
 
                 <div class="plan-feature-item">
                   <div class="plan-info-icon" aria-hidden="true">⊙</div>
-                  <span>Certificados de calidad · Cotizar según N° de celdas monitoreadas</span>
+                  <span data-i18n="plan1_feat4">Quality certificates · Quote according to monitored cells</span>
                 </div>
               </div>
             </div>
 
-            <button class="btn btn-plan-white" data-open-demo data-plan="Recuperation Supplier">Cotizar</button>
+            <button class="btn btn-plan-white" data-open-demo data-plan="Recuperation Supplier" data-i18n="plan1_cta">Get a quote</button>
           </div>
 
           <!-- Plan 2: Asset Owner -->
           <div class="plan-card plan-card-white">
             <div>
               <div class="plan-header">
-                <h3 class="plan-name">Asset Owner</h3>
-                <p class="plan-sub">Para plantas con línea in-house</p>
+                <h3 class="plan-name" data-i18n="plan2_name">Asset Owner</h3>
+                <p class="plan-sub" data-i18n="plan2_sub">For plants with in-house lines</p>
               </div>
 
               <div class="plan-features">
@@ -489,24 +501,24 @@
                   <div class="plan-check-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span>Vista consolidada de componentes recuperados</span>
+                  <span data-i18n="plan2_feat1">Consolidated view of recovered components</span>
                 </div>
 
                 <div class="plan-feature-item">
                   <div class="plan-check-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <span>Cumplimiento de PCR por proveedor</span>
+                  <span data-i18n="plan2_feat2">PCR compliance tracking per supplier</span>
                 </div>
 
                 <div class="plan-feature-item">
                   <div class="plan-info-icon" aria-hidden="true">⊙</div>
-                  <span>Exportación para auditoría · Cotizar según N° de componentes gestionados</span>
+                  <span data-i18n="plan2_feat3">Audit-ready export · Quote according to managed components</span>
                 </div>
               </div>
             </div>
 
-            <button class="btn btn-plan-dark" data-open-demo data-plan="Asset Owner">Cotizar</button>
+            <button class="btn btn-plan-dark" data-open-demo data-plan="Asset Owner" data-i18n="plan2_cta">Get a quote</button>
           </div>
         </div>
       </div>
@@ -516,8 +528,8 @@
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">PREGUNTAS FRECUENTES</span>
-          <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+          <span class="section-kicker" data-i18n="faq_kicker">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title" data-i18n="faq_title">Have any questions?</h2>
         </div>
 
         <div class="faq-container">
@@ -529,10 +541,10 @@
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </span>
-              <span>¿Necesito modificar el PLC de mi celda HVOF para usar EdgeWatch?</span>
+              <span data-i18n="faq_q1">Do I need to modify my HVOF cell's PLC to use EdgeWatch?</span>
             </button>
             <div class="faq-answer">
-              <p>No. El gateway de EdgeWatch se conecta de forma no invasiva mediante protocolos industriales estándar (OPC UA, Modbus TCP, Ethernet/IP, entre otros), leyendo los datos sin alterar la lógica de control ni el software del fabricante.</p>
+              <p data-i18n="faq_a1">No. The EdgeWatch gateway connects non-invasively via standard industrial protocols (OPC UA, Modbus TCP, Ethernet/IP, etc.), reading telemetry without altering control logic or manufacturer software.</p>
             </div>
           </div>
 
@@ -544,10 +556,10 @@
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </span>
-              <span>¿Qué pasa con la información de mis clientes y de mi proceso?</span>
+              <span data-i18n="faq_q2">What happens to my process and customer data?</span>
             </button>
             <div class="faq-answer">
-              <p>Toda la información viaja cifrada de extremo a extremo con estándares de nivel bancario e industrial (TLS 1.3 / AES-256). Los datos de cada cliente y celda se encuentran completamente aislados en tenencias independientes y protegidos con estrictos acuerdos de confidencialidad y propiedad de datos.</p>
+              <p data-i18n="faq_a2">All data travels end-to-end encrypted with industrial and banking-grade security standards (TLS 1.3 / AES-256). Each organization's data is isolated in independent multi-tenant silos and protected by strict confidentiality agreements.</p>
             </div>
           </div>
 
@@ -559,10 +571,10 @@
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </span>
-              <span>¿Cómo se calcula el costo de la suscripción?</span>
+              <span data-i18n="faq_q3">How is the subscription cost calculated?</span>
             </button>
             <div class="faq-answer">
-              <p>Se calcula por celda HVOF monitoreada; contáctenos para una cotización según el número de equipos y su tipo de organización.</p>
+              <p data-i18n="faq_a3">It is calculated per monitored HVOF cell; contact us for a custom quote based on your number of spray booths and organization profile.</p>
             </div>
           </div>
 
@@ -574,10 +586,10 @@
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </span>
-              <span>¿Qué pasa si mi suscripción vence?</span>
+              <span data-i18n="faq_q4">What happens if my subscription expires?</span>
             </button>
             <div class="faq-answer">
-              <p>Sus datos históricos y certificados emitidos permanecen completamente seguros y disponibles para consulta y exportación durante 90 días posteriores al vencimiento. Podrá reactivar su suscripción en cualquier momento sin perder la trazabilidad previa.</p>
+              <p data-i18n="faq_a4">Your historical telemetry data and issued certificates remain securely stored and available for audit export for 90 days after expiration. You can reactivate your account at any time without losing prior records.</p>
             </div>
           </div>
         </div>
@@ -593,34 +605,34 @@
         <div class="footer-brand">
           <div class="footer-logo">WebRunners</div>
           <div class="footer-links">
-            <a href="#nosotros">Nosotros</a>
-            <a href="#solucion">About the Product</a>
+            <a href="#testimonios" data-i18n="footer_about">About Us</a>
+            <a href="#solucion" data-i18n="footer_product_about">About the Product</a>
           </div>
         </div>
 
-        <!-- Col 2: Producto -->
+        <!-- Col 2: Product -->
         <div class="footer-col">
-          <h4>Producto</h4>
+          <h4 data-i18n="footer_col_product">Product</h4>
           <div class="footer-links">
-            <a href="#como-funciona">Cómo funciona</a>
-            <a href="#proveedores">Segmentos</a>
-            <a href="#planes">Planes</a>
+            <a href="#como-funciona" data-i18n="footer_how">How it works</a>
+            <a href="#proveedores" data-i18n="footer_segments">Segments</a>
+            <a href="#planes" data-i18n="footer_plans">Plans</a>
           </div>
         </div>
 
         <!-- Col 3: Legal -->
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4 data-i18n="footer_col_legal">Legal</h4>
           <div class="footer-links">
-            <a href="#">Términos y Condiciones</a>
-            <a href="#">Política de Privacidad</a>
+            <a href="#" data-i18n="footer_terms">Terms & Conditions</a>
+            <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 EdgeWatch / WebRunners. Todos los derechos reservados.</p>
-        <p>Trazabilidad y diagnóstico inteligente para procesos HVOF.</p>
+        <p data-i18n="footer_copy">&copy; 2026 EdgeWatch / WebRunners. All rights reserved.</p>
+        <p data-i18n="footer_tagline">Intelligent traceability and diagnostics for HVOF processes.</p>
       </div>
     </div>
   </footer>
@@ -628,46 +640,49 @@
   <!-- ==================== Demo & Contact Modal ==================== -->
   <div id="demo-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
-      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
-      <h3 id="modal-title" class="modal-title">Solicitar Demostración</h3>
-      <p class="modal-subtitle">Descubra cómo EdgeWatch optimiza la trazabilidad y diagnóstico de sus celdas HVOF.</p>
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal-title" class="modal-title" data-i18n="modal_title">Request a Demonstration</h3>
+      <p class="modal-subtitle" data-i18n="modal_subtitle">Discover how EdgeWatch streamlines traceability and diagnostics for your HVOF cells.</p>
 
       <form class="modal-form">
         <div class="form-group">
-          <label for="modal-name">Nombre completo</label>
-          <input type="text" id="modal-name" required placeholder="Ej: Carlos Mendoza">
+          <label for="modal-name" data-i18n="modal_name_label">Full name</label>
+          <input type="text" id="modal-name" required placeholder="e.g., Carlos Mendoza" data-i18n-placeholder="modal_name_ph">
         </div>
 
         <div class="form-group">
-          <label for="modal-email">Correo corporativo</label>
-          <input type="email" id="modal-email" required placeholder="carlos@empresa.com">
+          <label for="modal-email" data-i18n="modal_email_label">Corporate email</label>
+          <input type="email" id="modal-email" required placeholder="carlos@company.com" data-i18n-placeholder="modal_email_ph">
         </div>
 
         <div class="form-group">
-          <label for="modal-company">Empresa / Organización</label>
-          <input type="text" id="modal-company" required placeholder="Ej: Metalúrgica Minera S.A.">
+          <label for="modal-company" data-i18n="modal_company_label">Company / Organization</label>
+          <input type="text" id="modal-company" required placeholder="e.g., Mining Metallurgy Corp." data-i18n-placeholder="modal_company_ph">
         </div>
 
         <div class="form-group">
-          <label for="modal-plan-select">Perfil de operación</label>
+          <label for="modal-plan-select" data-i18n="modal_profile_label">Operating profile</label>
           <select id="modal-plan-select">
-            <option value="">Seleccione una opción</option>
-            <option value="Recuperation Supplier">Proveedor de servicio de recubrimiento HVOF</option>
-            <option value="Asset Owner">Planta / Propietario de activos (in-house)</option>
-            <option value="General">Consulta general o técnica</option>
+            <option value="" data-i18n="modal_profile_default">Select an option</option>
+            <option value="Recuperation Supplier" data-i18n="modal_profile_supplier">HVOF coating service provider</option>
+            <option value="Asset Owner" data-i18n="modal_profile_owner">Plant / Asset Owner (in-house)</option>
+            <option value="General" data-i18n="modal_profile_general">General or technical inquiry</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="modal-message">Detalles o requerimientos específicos (opcional)</label>
-          <textarea id="modal-message" rows="3" placeholder="¿Cuántas celdas o equipos HVOF operan actualmente?"></textarea>
+          <label for="modal-message" data-i18n="modal_msg_label">Specific requirements or details (optional)</label>
+          <textarea id="modal-message" rows="3" placeholder="How many HVOF cells or equipment do you currently operate?" data-i18n-placeholder="modal_msg_ph"></textarea>
         </div>
 
-        <button type="submit" class="form-submit-btn">Solicitar demostración</button>
+        <button type="submit" class="form-submit-btn" data-i18n="modal_submit">Request demonstration</button>
       </form>
     </div>
   </div>
 
+  <!-- Scripts: Translations, i18n Controller, and UI Interaction -->
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
