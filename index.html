@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EdgeWatch - Trazabilidad, alertas y diagnóstico en tiempo real para procesos de recubrimiento HVOF">
+  <title>EdgeWatch | Trazabilidad y Diagnóstico para Procesos HVOF</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body id="top">
+
+  <!-- ==================== Site Header / Navbar ==================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#top" class="brand-logo" aria-label="EdgeWatch Home">
+        <img src="assets/logo.png" height="24" alt="EdgeWatch Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#solucion" class="nav-link">Producto</a>
+        <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+        <a href="#planes" class="nav-link">Planes</a>
+        <a href="#testimonios" class="nav-link">Nosotros</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="nav-actions">
+        <button class="btn btn-outline" data-open-demo>Solicitar demo</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== Hero Section ==================== -->
+    <section class="hero-section">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Deje de perseguir el dato que su propio equipo ya genera</h1>
+          <p class="hero-subtitle">Trazabilidad, alertas y diagnóstico en tiempo real para procesos de recubrimiento HVOF</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" data-open-demo>Solicitar demo</button>
+            <a href="#como-funciona" class="btn btn-ghost">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Ver cómo funciona
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-phone-container">
+            <img src="assets/hero-phone.png" alt="EdgeWatch Aplicación Móvil de Integraciones" class="hero-phone-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Problem Section ==================== -->
+    <section class="problem-section" id="problema">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">EL PROBLEMA</span>
+          <h2 class="section-title">El costo del diagnóstico a ciegas</h2>
+        </div>
+
+        <div class="problem-grid">
+          <!-- Problem 1 -->
+          <div class="problem-card">
+            <div class="badge-circle badge-green" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18.178 8c5.096 0 5.096 8 0 8-2.67 0-4.66-2.193-6.178-4.32C10.482 9.553 8.492 7.36 5.822 7.36c-5.096 0-5.096 8 0 8 2.67 0 4.66-2.193 6.178-4.32"/>
+              </svg>
+            </div>
+            <h3 class="problem-card-title">Trazabilidad perdida</h3>
+            <p class="problem-card-text">Los parámetros de proceso quedan en el PLC de la máquina o en registros de papel; sin vínculo con la OF y la WO del cliente.</p>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="problem-card">
+            <div class="badge-circle badge-blue" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+                <polyline points="4 6 12 10 20 4"></polyline>
+              </svg>
+            </div>
+            <h3 class="problem-card-title">11 % de ingresos perdidos</h3>
+            <p class="problem-card-text">Las 500 mayores empresas del mundo pierden en promedio 11 % de sus ingresos por paradas no planificadas; el 45 % se origina en fallas de componentes críticos (Siemens, True Cost of Downtime).</p>
+          </div>
+
+          <!-- Problem 3 -->
+          <div class="problem-card">
+            <div class="badge-circle badge-red" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <h3 class="problem-card-title">US$ 180,000 por incidente</h3>
+            <p class="problem-card-text">Costo promedio de una parada de equipo en el sector minero, cuando el diagnóstico depende del conocimiento tácito de pocos técnicos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HVOF Provider Section ==================== -->
+    <section class="provider-section" id="proveedores">
+      <div class="container provider-grid">
+        <div class="provider-visual">
+          <img src="assets/analytics-phone.png" alt="EdgeWatch Plataforma de Análisis HVOF" class="analytics-phone-img">
+        </div>
+
+        <div class="provider-content">
+          <span class="section-kicker">PARA PROVEEDORES DE SERVICIO HVOF</span>
+          <h2 class="section-title text-left">Trazabilidad y diagnóstico para su servicio de recubrimiento</h2>
+
+          <div class="provider-features">
+            <!-- Feature 1 -->
+            <div class="feature-item-row">
+              <div class="feature-square-icon icon-pink" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="feature-item-body">
+                <h4>Sesión vinculada a su OF/WO</h4>
+                <p>Cada sesión de rociado queda asociada a la orden de fabricación, la orden de trabajo, el cliente y el modelo de componente.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item-row">
+              <div class="feature-square-icon icon-red" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div class="feature-item-body">
+                <h4>Diagnóstico por componente</h4>
+                <p>El catálogo de reglas causa-efecto identifica la parte de máquina sospechosa ante cada falla, en lugar de un código crudo del PLC.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Solution Section ==================== -->
+    <section class="solution-section" id="solucion">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">LA SOLUCIÓN</span>
+          <h2 class="section-title">De datos aislados a decisiones predictivas</h2>
+        </div>
+
+        <div class="solution-grid">
+          <!-- Card 1 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-red" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Trazabilidad</h3>
+            <p class="solution-card-text">Historia completa del componente por número de serie, OF o WO, consultable en un solo lugar.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-blue" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Alertas</h3>
+            <p class="solution-card-text">Notificación en tiempo real cuando un parámetro sale de su rango nominal, mientras la sesión está en curso.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-yellow" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Diagnóstico</h3>
+            <p class="solution-card-text">Causa probable y componente de máquina sospechoso, sugeridos automáticamente por el catálogo de reglas.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-green" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Certificados de Calidad</h3>
+            <p class="solution-card-text">Evidencia documentada de proceso dentro de tolerancia, exportable para el cliente minero.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-purple" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+                <path d="M16.24 7.76a6 6 0 1 0 0 8.49"></path>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Desempeño en Campo (PCR)</h3>
+            <p class="solution-card-text">Vida útil real registrada al retorno de la pieza y contrastada contra el PCR comprometido.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="solution-card">
+            <div class="solution-icon-box icon-orange" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                <line x1="12" y1="11" x2="12" y2="17"></line>
+                <line x1="9" y1="14" x2="15" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Reportes de Falla</h3>
+            <p class="solution-card-text">Frecuencia de fallas por celda y por componente, para priorizar intervenciones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Plant / Asset Owner Section ==================== -->
+    <section class="plant-section" id="plantas">
+      <div class="container plant-grid">
+        <div class="plant-content">
+          <span class="section-kicker">PARA PLANTAS CON LÍNEA DE RECUBRIMIENTO PROPIA</span>
+          <h2 class="section-title text-left">Vista consolidada del desempeño de sus proveedores</h2>
+          <p class="section-desc text-left">Elimine el cruce manual de información: consulte en una sola vista los componentes recuperados, su proveedor, el certificado emitido y la tasa de cumplimiento de PCR agrupada por proveedor y modelo.</p>
+          <button class="btn btn-dark plant-btn" data-open-demo data-plan="Asset Owner">Comenzar como propietario de activos</button>
+        </div>
+
+        <div class="plant-visual">
+          <img src="assets/pcr-diagram.png" alt="Consolidación de Proveedores OF WO PCR PDF CSV" class="pcr-diagram-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== How It Works Section ==================== -->
+    <section class="how-it-works-section" id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker kicker-light">CÓMO FUNCIONA</span>
+          <h2 class="section-title text-white">Veamos como funciona</h2>
+        </div>
+
+        <div class="steps-timeline-wrapper">
+          <div class="steps-connecting-line" aria-hidden="true"></div>
+
+          <div class="steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-circle">01</div>
+              <h3 class="step-title">Conecte el gateway</h3>
+              <p class="step-text">Vincule el gateway de telemetría al PLC de su celda HVOF, sin modificar el equipo ni el software del fabricante.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-circle">02</div>
+              <h3 class="step-title">Registre la sesión</h3>
+              <p class="step-text">Cada sesión de rociado se asocia automáticamente a su OF, WO, cliente y modelo de componente.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-circle">03</div>
+              <h3 class="step-title">Reciba alertas</h3>
+              <p class="step-text">El sistema detecta desviaciones fuera de rango y notifica al responsable mientras la sesión está en curso.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+              <div class="step-circle">04</div>
+              <h3 class="step-title">Emita el certificado / compare contra el PCR</h3>
+              <p class="step-text">Genere el certificado de calidad de la orden y contraste el desempeño real en campo contra el PCR comprometido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Testimonials Section ==================== -->
+    <section class="testimonials-section" id="testimonios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">TESTIMONIOS</span>
+          <h2 class="section-title">Conoce la satisfacción de nuestros clientes</h2>
+        </div>
+
+        <div class="testimonials-carousel-wrapper">
+          <div class="testimonials-track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                  ★★★★☆
+                </div>
+                <div class="testimonial-role">Ingeniería de Calidad</div>
+                <p class="testimonial-quote">"Por fin puedo sustentar ante el cliente minero que un lote fue recubierto dentro de tolerancia, sin reconstruir nada desde papeles."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="assets/avatar-maria.png" alt="María Herrera" class="author-avatar">
+                <div class="author-info">
+                  <span class="author-name">María Herrera</span>
+                  <span class="author-handle">@mari.herre</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                  ★★★★☆
+                </div>
+                <div class="testimonial-role">Jefe de Mantenimiento</div>
+                <p class="testimonial-quote">"El diagnóstico ya no depende de que el técnico más antiguo esté de turno. La plataforma nos dice qué componente mirar."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="assets/avatar-denis.png" alt="Denis Bueno" class="author-avatar">
+                <div class="author-info">
+                  <span class="author-name">Denis Bueno</span>
+                  <span class="author-handle">@denny.bun</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                  ★★★★☆
+                </div>
+                <div class="testimonial-role">Supervisor de Procesos</div>
+                <p class="testimonial-quote">"Redujimos a la mitad el tiempo que nos tomaba determinar la causa de una parada."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="assets/avatar-esteban.png" alt="Esteban Romero" class="author-avatar">
+                <div class="author-info">
+                  <span class="author-name">Esteban Romero</span>
+                  <span class="author-handle">@romer.ban</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-rating" aria-label="Calificación: 4.5 estrellas">
+                  ★★★★☆
+                </div>
+                <div class="testimonial-role">Analista de Confiabilidad</div>
+                <p class="testimonial-quote">"Ahora vemos en una sola pantalla el cumplimiento de PCR de todos los proveedores y optimizamos la rotación de repuestos críticos."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="assets/avatar-arnold.png" alt="Arnold Parra" class="author-avatar">
+                <div class="author-info">
+                  <span class="author-name">Arnold Parra</span>
+                  <span class="author-handle">@mid.parra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Arrow Controls -->
+        <div class="testimonials-controls">
+          <button class="carousel-arrow carousel-prev" aria-label="Anterior testimonio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-arrow carousel-next" aria-label="Siguiente testimonio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Real-Time Alerts Section ==================== -->
+    <section class="alerts-section" id="alertas">
+      <div class="container alerts-grid">
+        <div class="alerts-visual">
+          <img src="assets/alert-hand.png" alt="Notificaciones y Alertas Críticas en Móvil" class="alert-hand-img">
+        </div>
+
+        <div class="alerts-content">
+          <span class="section-kicker">ALERTAS EN TIEMPO REAL</span>
+          <h2 class="section-title text-left">Reciba alertas críticas donde esté</h2>
+          <p class="section-desc text-left">El operador y el supervisor de mantenimiento reciben la alerta en el momento en que ocurre la desviación, en la plataforma y por correo electrónico.</p>
+          <button class="btn btn-dark alerts-btn" data-open-demo>Conocer más</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Plans Section ==================== -->
+    <section class="plans-section" id="planes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker kicker-light">PLANES</span>
+          <h2 class="section-title text-white">Planes pensados para su forma de operar</h2>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Plan 1: Recuperation Supplier -->
+          <div class="plan-card plan-card-glass">
+            <div>
+              <div class="plan-header">
+                <h3 class="plan-name">Recuperation Supplier</h3>
+                <p class="plan-sub">Para proveedores de servicio HVOF</p>
+              </div>
+
+              <div class="plan-features">
+                <div class="plan-feature-item">
+                  <div class="plan-check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span>Gestión de celdas HVOF</span>
+                </div>
+
+                <div class="plan-feature-item">
+                  <div class="plan-check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span>Trazabilidad OF/WO</span>
+                </div>
+
+                <div class="plan-feature-item">
+                  <div class="plan-check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span>Alertas y diagnóstico asistido</span>
+                </div>
+
+                <div class="plan-feature-item">
+                  <div class="plan-info-icon" aria-hidden="true">⊙</div>
+                  <span>Certificados de calidad · Cotizar según N° de celdas monitoreadas</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-plan-white" data-open-demo data-plan="Recuperation Supplier">Cotizar</button>
+          </div>
+
+          <!-- Plan 2: Asset Owner -->
+          <div class="plan-card plan-card-white">
+            <div>
+              <div class="plan-header">
+                <h3 class="plan-name">Asset Owner</h3>
+                <p class="plan-sub">Para plantas con línea in-house</p>
+              </div>
+
+              <div class="plan-features">
+                <div class="plan-feature-item">
+                  <div class="plan-check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span>Vista consolidada de componentes recuperados</span>
+                </div>
+
+                <div class="plan-feature-item">
+                  <div class="plan-check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span>Cumplimiento de PCR por proveedor</span>
+                </div>
+
+                <div class="plan-feature-item">
+                  <div class="plan-info-icon" aria-hidden="true">⊙</div>
+                  <span>Exportación para auditoría · Cotizar según N° de componentes gestionados</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-plan-dark" data-open-demo data-plan="Asset Owner">Cotizar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ Section ==================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">PREGUNTAS FRECUENTES</span>
+          <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+        </div>
+
+        <div class="faq-container">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-icon-circle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+              <span>¿Necesito modificar el PLC de mi celda HVOF para usar EdgeWatch?</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. El gateway de EdgeWatch se conecta de forma no invasiva mediante protocolos industriales estándar (OPC UA, Modbus TCP, Ethernet/IP, entre otros), leyendo los datos sin alterar la lógica de control ni el software del fabricante.</p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-icon-circle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+              <span>¿Qué pasa con la información de mis clientes y de mi proceso?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Toda la información viaja cifrada de extremo a extremo con estándares de nivel bancario e industrial (TLS 1.3 / AES-256). Los datos de cada cliente y celda se encuentran completamente aislados en tenencias independientes y protegidos con estrictos acuerdos de confidencialidad y propiedad de datos.</p>
+            </div>
+          </div>
+
+          <!-- Question 3 (Active by default as in the design) -->
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span class="faq-icon-circle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+              <span>¿Cómo se calcula el costo de la suscripción?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Se calcula por celda HVOF monitoreada; contáctenos para una cotización según el número de equipos y su tipo de organización.</p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-icon-circle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+              <span>¿Qué pasa si mi suscripción vence?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sus datos históricos y certificados emitidos permanecen completamente seguros y disponibles para consulta y exportación durante 90 días posteriores al vencimiento. Podrá reactivar su suscripción en cualquier momento sin perder la trazabilidad previa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & About -->
+        <div class="footer-brand">
+          <div class="footer-logo">WebRunners</div>
+          <div class="footer-links">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#solucion">About the Product</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Producto -->
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <div class="footer-links">
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#proveedores">Segmentos</a>
+            <a href="#planes">Planes</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Legal -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EdgeWatch / WebRunners. Todos los derechos reservados.</p>
+        <p>Trazabilidad y diagnóstico inteligente para procesos HVOF.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== Demo & Contact Modal ==================== -->
+  <div id="demo-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 id="modal-title" class="modal-title">Solicitar Demostración</h3>
+      <p class="modal-subtitle">Descubra cómo EdgeWatch optimiza la trazabilidad y diagnóstico de sus celdas HVOF.</p>
+
+      <form class="modal-form">
+        <div class="form-group">
+          <label for="modal-name">Nombre completo</label>
+          <input type="text" id="modal-name" required placeholder="Ej: Carlos Mendoza">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-email">Correo corporativo</label>
+          <input type="email" id="modal-email" required placeholder="carlos@empresa.com">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-company">Empresa / Organización</label>
+          <input type="text" id="modal-company" required placeholder="Ej: Metalúrgica Minera S.A.">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-plan-select">Perfil de operación</label>
+          <select id="modal-plan-select">
+            <option value="">Seleccione una opción</option>
+            <option value="Recuperation Supplier">Proveedor de servicio de recubrimiento HVOF</option>
+            <option value="Asset Owner">Planta / Propietario de activos (in-house)</option>
+            <option value="General">Consulta general o técnica</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-message">Detalles o requerimientos específicos (opcional)</label>
+          <textarea id="modal-message" rows="3" placeholder="¿Cuántas celdas o equipos HVOF operan actualmente?"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn">Solicitar demostración</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
