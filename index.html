@@ -537,7 +537,7 @@
         <div class="faq-container">
           <!-- Question 1 -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-ans-1">
               <span class="faq-icon-circle" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -545,14 +545,14 @@
               </span>
               <span data-i18n="faq_q1">Do I need to modify my HVOF cell's PLC to use EdgeWatch?</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1" aria-hidden="true">
               <p data-i18n="faq_a1">No. The EdgeWatch gateway connects non-invasively via standard industrial protocols (OPC UA, Modbus TCP, Ethernet/IP, etc.), reading telemetry without altering control logic or manufacturer software.</p>
             </div>
           </div>
 
           <!-- Question 2 -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-ans-2">
               <span class="faq-icon-circle" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -560,14 +560,14 @@
               </span>
               <span data-i18n="faq_q2">What happens to my process and customer data?</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2" aria-hidden="true">
               <p data-i18n="faq_a2">All data travels end-to-end encrypted with industrial and banking-grade security standards (TLS 1.3 / AES-256). Each organization's data is isolated in independent multi-tenant silos and protected by strict confidentiality agreements.</p>
             </div>
           </div>
 
           <!-- Question 3 (Active by default as in the design) -->
           <div class="faq-item active">
-            <button class="faq-question" aria-expanded="true">
+            <button class="faq-question" id="faq-btn-3" aria-expanded="true" aria-controls="faq-ans-3">
               <span class="faq-icon-circle" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -575,14 +575,14 @@
               </span>
               <span data-i18n="faq_q3">How is the subscription cost calculated?</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3" aria-hidden="false">
               <p data-i18n="faq_a3">It is calculated per monitored HVOF cell; contact us for a custom quote based on your number of spray booths and organization profile.</p>
             </div>
           </div>
 
           <!-- Question 4 -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-ans-4">
               <span class="faq-icon-circle" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -590,7 +590,7 @@
               </span>
               <span data-i18n="faq_q4">What happens if my subscription expires?</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4" aria-hidden="true">
               <p data-i18n="faq_a4">Your historical telemetry data and issued certificates remain securely stored and available for audit export for 90 days after expiration. You can reactivate your account at any time without losing prior records.</p>
             </div>
           </div>

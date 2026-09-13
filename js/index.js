@@ -46,25 +46,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const faqItems = document.querySelectorAll('.faq-item');
+  const faqButtons = Array.from(document.querySelectorAll('.faq-question'));
 
   faqItems.forEach(item => {
     const questionBtn = item.querySelector('.faq-question');
-    if (questionBtn) {
+    const answerPanel = item.querySelector('.faq-answer');
+
+    if (questionBtn && answerPanel) {
       questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
+        const isCurrentlyExpanded = questionBtn.getAttribute('aria-expanded') === 'true';
 
         faqItems.forEach(otherItem => {
           otherItem.classList.remove('active');
           const otherBtn = otherItem.querySelector('.faq-question');
+          const otherPanel = otherItem.querySelector('.faq-answer');
           if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          if (otherPanel) otherPanel.setAttribute('aria-hidden', 'true');
         });
 
-        if (!isActive) {
+        if (!isCurrentlyExpanded) {
           item.classList.add('active');
           questionBtn.setAttribute('aria-expanded', 'true');
+          answerPanel.setAttribute('aria-hidden', 'false');
         }
       });
     }
+  });
+
+  faqButtons.forEach((btn, index) => {
+    btn.addEventListener('keydown', (e) => {
+      let targetIndex = null;
+      if (e.key === 'ArrowDown') {
+        targetIndex = (index + 1) % faqButtons.length;
+      } else if (e.key === 'ArrowUp') {
+        targetIndex = (index - 1 + faqButtons.length) % faqButtons.length;
+      } else if (e.key === 'Home') {
+        targetIndex = 0;
+      } else if (e.key === 'End') {
+        targetIndex = faqButtons.length - 1;
+      }
+
+      if (targetIndex !== null) {
+        e.preventDefault();
+        faqButtons[targetIndex].focus();
+      }
+    });
   });
 
   const track = document.querySelector('.testimonials-track');
