@@ -262,7 +262,7 @@ const translations = {
     faq_a4: "Sus datos históricos y certificados emitidos permanecen completamente seguros y disponibles para consulta y exportación durante 90 días posteriores al vencimiento. Podrá reactivar su suscripción en cualquier momento sin perder la trazabilidad previa.",
 
     footer_about: "Nosotros",
-    footer_product_about: "About the Product",
+    footer_product_about: "Acerca del Producto",
     footer_col_product: "Producto",
     footer_how: "Cómo funciona",
     footer_segments: "Segmentos",
