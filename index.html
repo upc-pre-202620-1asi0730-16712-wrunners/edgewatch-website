@@ -48,7 +48,7 @@
           <button type="button" class="lang-btn" data-lang="es_419" aria-pressed="false" aria-label="Switch language to Spanish" data-i18n-aria="lang_btn_es_aria">ES</button>
         </div>
 
-        <button class="btn btn-outline" data-open-demo data-i18n="nav_cta">Request demo</button>
+        <button class="btn btn-outline" data-open-demo aria-haspopup="dialog" data-i18n="nav_cta">Request demo</button>
       </div>
     </div>
   </header>
@@ -62,7 +62,7 @@
           <h1 id="hero-title" class="hero-title" data-i18n="hero_title">Stop chasing the data that your own team already generates</h1>
           <p class="hero-subtitle" data-i18n="hero_subtitle">Real-time traceability, alerts, and diagnostics for HVOF thermal spray processes</p>
           <div class="hero-buttons">
-            <button class="btn btn-primary" data-open-demo data-i18n="hero_cta_primary">Request demo</button>
+            <button class="btn btn-primary" data-open-demo aria-haspopup="dialog" data-i18n="hero_cta_primary">Request demo</button>
             <a href="#como-funciona" class="btn btn-ghost">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -270,7 +270,7 @@
           <span class="section-kicker" data-i18n="plant_kicker">FOR PLANTS WITH IN-HOUSE COATING LINES</span>
           <h2 id="plant-title" class="section-title text-left" data-i18n="plant_title">Consolidated performance view of your suppliers</h2>
           <p class="section-desc text-left" data-i18n="plant_desc">Eliminate manual information cross-referencing: inspect recovered components, supplier data, issued certificates, and PCR compliance rates grouped by vendor and model in a single unified view.</p>
-          <button class="btn btn-dark plant-btn" data-open-demo data-plan="Asset Owner" data-i18n="plant_btn">Get started as asset owner</button>
+          <button class="btn btn-dark plant-btn" data-open-demo aria-haspopup="dialog" data-plan="Asset Owner" data-i18n="plant_btn">Get started as asset owner</button>
         </div>
 
         <div class="plant-visual">
@@ -439,7 +439,7 @@
           <span class="section-kicker" data-i18n="alerts_kicker">REAL-TIME ALERTS</span>
           <h2 id="alerts-title" class="section-title text-left" data-i18n="alerts_title">Receive critical alerts wherever you are</h2>
           <p class="section-desc text-left" data-i18n="alerts_desc">Operators and maintenance supervisors receive alerts the instant a deviation occurs, both within the platform and via email.</p>
-          <button class="btn btn-dark alerts-btn" data-open-demo data-i18n="alerts_btn">Learn more</button>
+          <button class="btn btn-dark alerts-btn" data-open-demo aria-haspopup="dialog" data-i18n="alerts_btn">Learn more</button>
         </div>
       </div>
     </section>
@@ -490,7 +490,7 @@
               </div>
             </div>
 
-            <button class="btn btn-plan-white" data-open-demo data-plan="Recuperation Supplier" data-i18n="plan1_cta">Get a quote</button>
+            <button class="btn btn-plan-white" data-open-demo aria-haspopup="dialog" data-plan="Recuperation Supplier" data-i18n="plan1_cta">Get a quote</button>
           </div>
 
           <!-- Plan 2: Asset Owner -->
@@ -523,7 +523,7 @@
               </div>
             </div>
 
-            <button class="btn btn-plan-dark" data-open-demo data-plan="Asset Owner" data-i18n="plan2_cta">Get a quote</button>
+            <button class="btn btn-plan-dark" data-open-demo aria-haspopup="dialog" data-plan="Asset Owner" data-i18n="plan2_cta">Get a quote</button>
           </div>
         </div>
       </div>
@@ -643,26 +643,29 @@
   </footer>
 
   <!-- ==================== Demo & Contact Modal ==================== -->
-  <div id="demo-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="demo-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-subtitle" aria-hidden="true">
     <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <button class="modal-close" type="button" aria-label="Close modal dialog" data-i18n-aria="modal_close_aria">&times;</button>
       <h3 id="modal-title" class="modal-title" data-i18n="modal_title">Request a Demonstration</h3>
-      <p class="modal-subtitle" data-i18n="modal_subtitle">Discover how EdgeWatch streamlines traceability and diagnostics for your HVOF cells.</p>
+      <p id="modal-subtitle" class="modal-subtitle" data-i18n="modal_subtitle">Discover how EdgeWatch streamlines traceability and diagnostics for your HVOF cells.</p>
+
+      <!-- Live status for screen reader announcement -->
+      <div id="modal-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
       <form class="modal-form">
         <div class="form-group">
           <label for="modal-name" data-i18n="modal_name_label">Full name</label>
-          <input type="text" id="modal-name" required placeholder="e.g., Carlos Mendoza" data-i18n-placeholder="modal_name_ph">
+          <input type="text" id="modal-name" required aria-required="true" placeholder="e.g., Carlos Mendoza" data-i18n-placeholder="modal_name_ph">
         </div>
 
         <div class="form-group">
           <label for="modal-email" data-i18n="modal_email_label">Corporate email</label>
-          <input type="email" id="modal-email" required placeholder="carlos@company.com" data-i18n-placeholder="modal_email_ph">
+          <input type="email" id="modal-email" required aria-required="true" placeholder="carlos@company.com" data-i18n-placeholder="modal_email_ph">
         </div>
 
         <div class="form-group">
           <label for="modal-company" data-i18n="modal_company_label">Company / Organization</label>
-          <input type="text" id="modal-company" required placeholder="e.g., Mining Metallurgy Corp." data-i18n-placeholder="modal_company_ph">
+          <input type="text" id="modal-company" required aria-required="true" placeholder="e.g., Mining Metallurgy Corp." data-i18n-placeholder="modal_company_ph">
         </div>
 
         <div class="form-group">

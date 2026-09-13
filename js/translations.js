@@ -143,6 +143,8 @@ const translations = {
 
     modal_title: "Request a Demonstration",
     modal_subtitle: "Discover how EdgeWatch streamlines traceability and diagnostics for your HVOF cells.",
+    modal_dialog_aria: "Request a demonstration dialog",
+    modal_close_aria: "Close modal dialog",
     modal_name_label: "Full name",
     modal_name_ph: "e.g., Carlos Mendoza",
     modal_email_label: "Corporate email",
@@ -305,6 +307,8 @@ const translations = {
 
     modal_title: "Solicitar Demostración",
     modal_subtitle: "Descubra cómo EdgeWatch optimiza la trazabilidad y diagnóstico de sus celdas HVOF.",
+    modal_dialog_aria: "Diálogo de solicitud de demostración",
+    modal_close_aria: "Cerrar diálogo modal",
     modal_name_label: "Nombre completo",
     modal_name_ph: "Ej: Carlos Mendoza",
     modal_email_label: "Correo corporativo",
