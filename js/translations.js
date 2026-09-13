@@ -2,6 +2,8 @@ const translations = {
   en_US: {
     doc_title: "EdgeWatch | Traceability & Diagnostics for HVOF Processes",
     doc_desc: "Real-time traceability, alerts, and diagnostics for HVOF thermal spray coating processes",
+    skip_to_content: "Skip to main content",
+    brand_home_aria: "EdgeWatch Home",
 
     nav_product: "Product",
     nav_how_it_works: "How it works",
@@ -125,6 +127,9 @@ const translations = {
     footer_privacy: "Privacy Policy",
     footer_copy: "© 2026 EdgeWatch / WebRunners. All rights reserved.",
     footer_tagline: "Intelligent traceability and diagnostics for HVOF processes.",
+    footer_nav_about_aria: "About navigation",
+    footer_nav_product_aria: "Product navigation",
+    footer_nav_legal_aria: "Legal navigation",
 
     modal_title: "Request a Demonstration",
     modal_subtitle: "Discover how EdgeWatch streamlines traceability and diagnostics for your HVOF cells.",
@@ -149,6 +154,8 @@ const translations = {
   es_419: {
     doc_title: "EdgeWatch | Trazabilidad y Diagnóstico para Procesos HVOF",
     doc_desc: "Trazabilidad, alertas y diagnóstico en tiempo real para procesos de recubrimiento HVOF",
+    skip_to_content: "Saltar al contenido principal",
+    brand_home_aria: "Inicio EdgeWatch",
 
     nav_product: "Producto",
     nav_how_it_works: "Cómo funciona",
@@ -272,6 +279,9 @@ const translations = {
     footer_privacy: "Política de Privacidad",
     footer_copy: "© 2026 EdgeWatch / WebRunners. Todos los derechos reservados.",
     footer_tagline: "Trazabilidad y diagnóstico inteligente para procesos HVOF.",
+    footer_nav_about_aria: "Navegación sobre nosotros",
+    footer_nav_product_aria: "Navegación de producto",
+    footer_nav_legal_aria: "Navegación legal",
 
     modal_title: "Solicitar Demostración",
     modal_subtitle: "Descubra cómo EdgeWatch optimiza la trazabilidad y diagnóstico de sus celdas HVOF.",
