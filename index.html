@@ -331,12 +331,15 @@
           <h2 id="test-title" class="section-title" data-i18n="test_title">Discover our customer satisfaction</h2>
         </div>
 
-        <div class="testimonials-carousel-wrapper">
-          <div class="testimonials-track">
+        <div class="testimonials-carousel-wrapper" role="region" aria-roledescription="carousel" aria-label="Customer Testimonials" data-i18n-aria="test_carousel_aria">
+          <!-- Screen reader live region announcing active slide -->
+          <div id="carousel-status" class="sr-only" aria-live="polite" aria-atomic="true">Showing slide 1 of 4</div>
+
+          <div class="testimonials-track" id="testimonials-track" aria-live="polite">
             <!-- Testimonial 1 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4: María Herrera, Quality Engineer" data-i18n-aria="test_slide_1_aria">
               <div>
-                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
+                <div class="testimonial-rating" role="img" aria-label="Rating: 4.5 out of 5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
                 <div class="testimonial-role" data-i18n="test_card1_role">Quality Engineer</div>
@@ -352,9 +355,9 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4: Denis Bueno, Maintenance Head" data-i18n-aria="test_slide_2_aria">
               <div>
-                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
+                <div class="testimonial-rating" role="img" aria-label="Rating: 4.5 out of 5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
                 <div class="testimonial-role" data-i18n="test_card2_role">Maintenance Head</div>
@@ -370,9 +373,9 @@
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4: Esteban Romero, Process Supervisor" data-i18n-aria="test_slide_3_aria">
               <div>
-                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
+                <div class="testimonial-rating" role="img" aria-label="Rating: 4.5 out of 5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
                 <div class="testimonial-role" data-i18n="test_card3_role">Process Supervisor</div>
@@ -388,9 +391,9 @@
             </div>
 
             <!-- Testimonial 4 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4: Arnold Parra, Reliability Analyst" data-i18n-aria="test_slide_4_aria">
               <div>
-                <div class="testimonial-rating" aria-label="Rating: 4.5 stars" data-i18n-aria="test_rating_aria">
+                <div class="testimonial-rating" role="img" aria-label="Rating: 4.5 out of 5 stars" data-i18n-aria="test_rating_aria">
                   ★★★★☆
                 </div>
                 <div class="testimonial-role" data-i18n="test_card4_role">Reliability Analyst</div>
@@ -409,14 +412,14 @@
 
         <!-- Carousel Arrow Controls -->
         <div class="testimonials-controls">
-          <button class="carousel-arrow carousel-prev" aria-label="Previous testimonial" data-i18n-aria="test_prev_aria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous testimonial" data-i18n-aria="test_prev_aria" aria-controls="testimonials-track">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
-          <button class="carousel-arrow carousel-next" aria-label="Next testimonial" data-i18n-aria="test_next_aria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <button type="button" class="carousel-arrow carousel-next" aria-label="Next testimonial" data-i18n-aria="test_next_aria" aria-controls="testimonials-track">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>

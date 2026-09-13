@@ -93,19 +93,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const track = document.querySelector('.testimonials-track');
+  const track = document.getElementById('testimonials-track') || document.querySelector('.testimonials-track');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
+  const carouselStatus = document.getElementById('carousel-status');
 
   if (track && prevBtn && nextBtn) {
     let currentIndex = 0;
     const cards = track.querySelectorAll('.testimonial-card');
 
-    function updateCarousel() {
+    function announceSlide() {
+      if (!carouselStatus) return;
+      const dict = getI18nDict();
+      const template = dict?.test_slide_status || 'Showing slide {current} of {total}';
+      carouselStatus.textContent = template
+        .replace('{current}', currentIndex + 1)
+        .replace('{total}', cards.length);
+    }
+
+    function updateCarousel(announce = true) {
       const card = cards[0];
       if (!card) return;
-      
-      const gap = 32; 
+
+      const gap = 32;
       const cardWidth = card.getBoundingClientRect().width;
       const scrollDistance = cardWidth + gap;
 
@@ -114,6 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentIndex > maxIndex) currentIndex = maxIndex;
 
       track.style.transform = `translateX(-${currentIndex * scrollDistance}px)`;
+      if (announce) {
+        announceSlide();
+      }
     }
 
     nextBtn.addEventListener('click', () => {
@@ -124,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         currentIndex = 0;
       }
-      updateCarousel();
+      updateCarousel(true);
     });
 
     prevBtn.addEventListener('click', () => {
@@ -133,12 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentIndex > 0) {
         currentIndex--;
       } else {
-        currentIndex = maxIndex; 
+        currentIndex = maxIndex;
       }
-      updateCarousel();
+      updateCarousel(true);
     });
 
-    window.addEventListener('resize', updateCarousel);
+    window.addEventListener('resize', () => updateCarousel(false));
   }
 
   const modalOverlay = document.getElementById('demo-modal');
