@@ -1645,3 +1645,84 @@ button, input, textarea, select {
   }
 }
 
+/* ==================== Accessibility & ARIA Utilities ==================== */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 1.5rem;
+  background-color: var(--primary-navy);
+  color: var(--color-white);
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  z-index: 99999;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--primary-teal);
+  transition: top 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1.5rem;
+  outline: 3px solid var(--primary-teal);
+  outline-offset: 3px;
+}
+
+/* Screen reader only utility class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High-contrast accessible focus-visible rings */
+:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* In dark backgrounds (how it works, plans), make focus rings clearly visible */
+.how-it-works-section :focus-visible,
+.plans-section :focus-visible {
+  outline-color: #93c5fd;
+}
+
+/* Accordion panel hidden state */
+.faq-answer[aria-hidden="true"] {
+  display: none;
+}
+.faq-item.active .faq-answer[aria-hidden="false"] {
+  display: block;
+}
+
+/* Respect user's motion preferences (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
