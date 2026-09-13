@@ -139,17 +139,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalForm) {
       modalForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        const currentLang = typeof getCurrentLanguage === 'function' ? getCurrentLanguage() : 'en_US';
+        const dict = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+
         const submitBtn = modalForm.querySelector('.form-submit-btn');
         if (submitBtn) {
-          submitBtn.textContent = 'Enviando solicitud...';
+          submitBtn.textContent = dict ? dict.modal_submitting : 'Sending request...';
           submitBtn.disabled = true;
         }
 
         setTimeout(() => {
-          alert('¡Gracias por su interés en EdgeWatch! Nos pondremos en contacto con su equipo a la brevedad para coordinar la demostración.');
+          const successMsg = dict ? dict.modal_success : 'Thank you for your interest in EdgeWatch! Our team will get in touch shortly to coordinate your demonstration.';
+          alert(successMsg);
           modalForm.reset();
           if (submitBtn) {
-            submitBtn.textContent = 'Solicitar demostración';
+            submitBtn.textContent = dict ? dict.modal_submit : 'Request demonstration';
             submitBtn.disabled = false;
           }
           closeModal();
