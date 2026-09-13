@@ -302,6 +302,45 @@ button, input, textarea, select {
 .nav-actions {
   display: flex;
   align-items: center;
+  gap: 1.25rem;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+  user-select: none;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.32rem 0.68rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--color-white);
+}
+
+.lang-btn.active {
+  background-color: var(--color-white);
+  color: var(--primary-navy);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu .mobile-lang-switcher {
+  display: none;
 }
 
 .mobile-toggle {
@@ -1455,6 +1494,11 @@ button, input, textarea, select {
 
   .nav-menu.open {
     transform: translateY(0);
+  }
+
+  .nav-menu .mobile-lang-switcher {
+    display: inline-flex;
+    margin-top: 0.5rem;
   }
 
   .nav-actions {
