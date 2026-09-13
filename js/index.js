@@ -154,24 +154,46 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => updateCarousel(false));
   }
 
+  // ==================== Demo & Contact Modal (WAI-ARIA Dialog Pattern) ====================
   const modalOverlay = document.getElementById('demo-modal');
   const modalCloseBtn = modalOverlay?.querySelector('.modal-close');
   const demoButtons = document.querySelectorAll('[data-open-demo]');
   const planSelect = document.getElementById('modal-plan-select');
+  const modalStatus = document.getElementById('modal-status');
+  let lastFocusedElement = null;
+
+  function getFocusableElements(container) {
+    return Array.from(container.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    ));
+  }
 
   function openModal(planName = '') {
     if (!modalOverlay) return;
+    lastFocusedElement = document.activeElement;
+
     if (planSelect && planName) {
       planSelect.value = planName;
     }
     modalOverlay.classList.add('active');
+    modalOverlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    const firstInput = modalOverlay.querySelector('#modal-name') || modalCloseBtn;
+    if (firstInput) {
+      setTimeout(() => firstInput.focus(), 50);
+    }
   }
 
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
+    modalOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
   }
 
   demoButtons.forEach(button => {
@@ -194,8 +216,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      if (!modalOverlay.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
         closeModal();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusables = getFocusableElements(modalOverlay);
+        if (focusables.length === 0) return;
+
+        const firstElement = focusables[0];
+        const lastElement = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
       }
     });
 
@@ -203,8 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalForm) {
       modalForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const currentLang = typeof getCurrentLanguage === 'function' ? getCurrentLanguage() : 'en_US';
-        const dict = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+        const dict = getI18nDict();
 
         const submitBtn = modalForm.querySelector('.form-submit-btn');
         if (submitBtn) {
@@ -212,8 +256,17 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.disabled = true;
         }
 
+        if (modalStatus) {
+          modalStatus.textContent = dict ? dict.modal_submitting : 'Sending request...';
+        }
+
         setTimeout(() => {
           const successMsg = dict ? dict.modal_success : 'Thank you for your interest in EdgeWatch! Our team will get in touch shortly to coordinate your demonstration.';
+
+          if (modalStatus) {
+            modalStatus.textContent = successMsg;
+          }
+
           alert(successMsg);
           modalForm.reset();
           if (submitBtn) {
