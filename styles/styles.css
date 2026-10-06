@@ -339,7 +339,8 @@ button, input, textarea, select {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-.nav-menu .mobile-lang-switcher {
+.nav-menu .mobile-lang-switcher,
+.nav-menu .mobile-sign-in {
   display: none;
 }
 
@@ -1499,6 +1500,10 @@ button, input, textarea, select {
   .nav-menu .mobile-lang-switcher {
     display: inline-flex;
     margin-top: 0.5rem;
+  }
+
+  .nav-menu .mobile-sign-in {
+    display: block;
   }
 
   .nav-actions {

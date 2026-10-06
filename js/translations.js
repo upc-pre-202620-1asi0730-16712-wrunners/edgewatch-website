@@ -14,6 +14,7 @@ const translations = {
     nav_plans: "Plans",
     nav_about: "About Us",
     nav_cta: "Request demo",
+    nav_sign_in: "Sign in",
     mobile_menu_open: "Open navigation menu",
     mobile_menu_close: "Close navigation menu",
 
@@ -178,6 +179,7 @@ const translations = {
     nav_plans: "Planes",
     nav_about: "Nosotros",
     nav_cta: "Solicitar demo",
+    nav_sign_in: "Iniciar sesión",
     mobile_menu_open: "Abrir menú de navegación",
     mobile_menu_close: "Cerrar menú de navegación",
 
