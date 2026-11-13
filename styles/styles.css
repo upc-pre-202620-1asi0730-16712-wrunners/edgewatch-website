@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 :root {
-  --primary-navy: #163278;
-  --primary-navy-dark: #0f2356;
-  --primary-navy-light: #1e429f;
-  --primary-blue: #2563eb;
-  --primary-blue-hover: #1d4ed8;
-  --primary-teal: #0ea5e9;
+  --primary-navy: #0e1a2b;
+  --primary-navy-dark: #091221;
+  --primary-navy-light: #1b2a40;
+  --primary-blue: #d4781c;
+  --primary-blue-hover: #b8651a;
+  --primary-teal: #1d4f91;
   
   --color-white: #ffffff;
-  --color-bg-light: #f8fafc;
+  --color-bg-light: #f6f7fa;
   --color-bg-subtle: #f1f5f9;
   --color-text-dark: #0f172a;
   --color-text-muted: #475569;
@@ -17,7 +15,7 @@
   --color-text-subtle: #94a3b8;
   --color-text-white: #ffffff;
   --color-text-white-dim: #cbd5e1;
-  --color-border: #e2e8f0;
+  --color-border: #e1e5ec;
   --color-border-subtle: #f1f5f9;
 
   --badge-green-bg: #ecfdf5;
@@ -44,7 +42,7 @@
   --badge-orange-border: #fed7aa;
   --badge-orange-icon: #ea580c;
 
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-main: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
@@ -136,7 +134,7 @@ button, input, textarea, select {
 }
 
 .section-kicker.kicker-light {
-  color: #93c5fd;
+  color: #f0b27a;
 }
 
 .section-title {
@@ -204,7 +202,7 @@ button, input, textarea, select {
 }
 
 .btn-ghost:hover {
-  color: #93c5fd;
+  color: #f0b27a;
 }
 
 .btn-ghost svg {
@@ -219,13 +217,13 @@ button, input, textarea, select {
 .btn-dark {
   background-color: var(--primary-navy);
   color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(22, 50, 120, 0.25);
+  box-shadow: 0 4px 14px rgba(212, 120, 28, 0.25);
 }
 
 .btn-dark:hover {
   background-color: var(--primary-navy-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(22, 50, 120, 0.35);
+  box-shadow: 0 6px 20px rgba(212, 120, 28, 0.35);
 }
 
 .site-header {
@@ -234,7 +232,7 @@ button, input, textarea, select {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(22, 50, 120, 0.96);
+  background: rgba(14, 26, 43, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -291,7 +289,7 @@ button, input, textarea, select {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #60a5fa;
+  background-color: #d4781c;
   transition: width var(--transition-fast);
 }
 
@@ -367,7 +365,7 @@ button, input, textarea, select {
 
 .hero-section {
   position: relative;
-  background: radial-gradient(circle at 75% 30%, #20459c 0%, #17357d 45%, #132a68 100%);
+  background: radial-gradient(circle at 78% 28%, rgba(212, 120, 28, 0.28) 0%, rgba(212, 120, 28, 0) 32%), linear-gradient(135deg, #1b2a40 0%, #0e1a2b 60%, #091221 100%);
   color: var(--color-white);
   padding: 4.5rem 0 6.5rem;
   overflow: hidden;
@@ -673,8 +671,8 @@ button, input, textarea, select {
 }
 
 .solution-icon-box.icon-blue {
-  background-color: #dbeafe;
-  color: #2563eb;
+  background-color: #ffede3;
+  color: #d4781c;
 }
 
 .solution-icon-box.icon-yellow {
@@ -754,7 +752,7 @@ button, input, textarea, select {
 
 .how-it-works-section {
   position: relative;
-  background: radial-gradient(circle at 50% 30%, #1e4399 0%, #163278 50%, #10255a 100%);
+  background: radial-gradient(circle at 50% 30%, #1b2a40 0%, #0e1a2b 55%, #091221 100%);
   color: var(--color-white);
   padding: 6.5rem 0 7rem;
   overflow: hidden;
@@ -987,7 +985,7 @@ button, input, textarea, select {
 
 .plans-section {
   position: relative;
-  background: radial-gradient(circle at 50% 20%, #1e4399 0%, #163278 50%, #112558 100%);
+  background: radial-gradient(circle at 50% 20%, #1b2a40 0%, #0e1a2b 55%, #091221 100%);
   color: var(--color-white);
   padding: 6.5rem 0 7.5rem;
   overflow: hidden;
@@ -1111,8 +1109,8 @@ button, input, textarea, select {
   height: 20px;
   min-width: 20px;
   border-radius: 50%;
-  border: 2px solid #0ea5e9;
-  color: #0ea5e9;
+  border: 2px solid #d4781c;
+  color: #d4781c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1393,7 +1391,7 @@ button, input, textarea, select {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--primary-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 120, 28, 0.2);
 }
 
 .form-submit-btn {
@@ -1705,7 +1703,7 @@ textarea:focus-visible {
 /* In dark backgrounds (how it works, plans), make focus rings clearly visible */
 .how-it-works-section :focus-visible,
 .plans-section :focus-visible {
-  outline-color: #93c5fd;
+  outline-color: #f0b27a;
 }
 
 /* Accordion panel hidden state */
