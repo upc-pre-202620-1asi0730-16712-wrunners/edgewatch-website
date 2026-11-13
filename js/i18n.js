@@ -48,6 +48,13 @@ function setLanguage(lang) {
     }
   });
 
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (dict[key] !== undefined) {
+      el.setAttribute('title', dict[key]);
+    }
+  });
+
   document.querySelectorAll('[data-i18n-alt]').forEach(el => {
     const key = el.getAttribute('data-i18n-alt');
     if (dict[key] !== undefined) {
